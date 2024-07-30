@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            color: #333;
-        }
-        p {
-            font-size: 1.2em;
-            color: #666;
-        }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Under Development</h1>
-        <p>We are working hard to bring you a new experience. Stay tuned!</p>
-    </div>
+    <header>
+        <div class="intro">
+            <div class="description">
+                <h1>Your Name</h1>
+                <p>Short personal description goes here. Mention your skills, interests, and what you specialize in.</p>
+            </div>
+            <div class="profile-picture">
+                <img src="your-picture.jpg" alt="Your Picture">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-carousel">
+                <div class="project-card" id="project1">
+                    <h3>Project 1</h3>
+                    <p>Brief description of project 1.</p>
+                </div>
+                <div class="project-card" id="project2">
+                    <h3>Project 2</h3>
+                    <p>Brief description of project 2.</p>
+                </div>
+                <div class="project-card" id="project3">
+                    <h3>Project 3</h3>
+                    <p>Brief description of project 3.</p>
+                </div>
+                <div class="project-card" id="project4">
+                    <h3>Project 4</h3>
+                    <p>Brief description of project 4.</p>
+                </div>
+                <div class="project-card" id="project5">
+                    <h3>Project 5</h3>
+                    <p>Brief description of project 5.</p>
+                </div>
+            </div>
+            <button class="carousel-button prev"><span class="arrow">❮</span></button>
+            <button class="carousel-button next"><span class="arrow">❯</span></button>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
