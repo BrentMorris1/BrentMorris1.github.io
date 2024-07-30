@@ -9,7 +9,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #625f83;
 }
 
 .intro {
@@ -24,13 +24,19 @@ header {
 }
 
 .profile-picture {
-    flex: 1;
-    text-align: right;
+    width: 50px; /* Set the width of the photo */
+    height:  100px;
+    padding: 30px;
+}
+
+.aboutme{
+    background-color: #d31919;
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
 }
 
 .profile-picture img {
-    border-radius: 50%;
-    max-width: 150px;
+    max-width: 1x;
     height: auto;
 }
 
