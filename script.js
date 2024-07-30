@@ -1,24 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.project-carousel');
-    const projects = document.querySelectorAll('.project-card');
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector('.slide');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
 
-    let currentIndex = 0;
+    const images = slider.querySelectorAll('img');
+    const totalImages = images.length;
+    const imagesToShow = 3;
+    const slideWidth = 100 / imagesToShow;
 
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+    let currentSlide = 0;
+
+    function updateSlidePosition() {
+        const offset = -currentSlide * slideWidth;
+        slider.style.transform = `translateX(${offset}%)`;
     }
 
-    nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % projects.length;
-        updateCarousel();
+    prevArrow.addEventListener('click', () => {
+        currentSlide = (currentSlide === 0) ? totalImages - imagesToShow : currentSlide - 1;
+        updateSlidePosition();
     });
 
-    prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-        updateCarousel();
+    nextArrow.addEventListener('click', () => {
+        currentSlide = (currentSlide >= totalImages - imagesToShow) ? 0 : currentSlide + 1;
+        updateSlidePosition();
     });
-
-    updateCarousel();
 });

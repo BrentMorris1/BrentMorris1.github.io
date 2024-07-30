@@ -69,35 +69,56 @@ header {
     box-sizing: border-box;
     padding: 20px;
     background-color: #e0f7fa;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0 10px;
-    transition: transform 0.5s ease-in-out;
 }
 
-.carousel-button {
-    background-color: rgba(128, 128, 128, 0.5);
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.prev {
-    left: 20px;
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
 }
 
-.next {
-    right: 20px;
+.slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 33.33%; /* Display 3 images at a time */
+    height: auto;
+    flex-shrink: 0;
 }
 
 .arrow {
+    position: absolute;
+    top: 50%;
+    background: rgba(255, 0, 0, 0.5);
     color: white;
-    font-size: 1.5em;
-    pointer-events: none;
+    border: none;
+    width: 40px;  /* Adjust the width to make the button circular */
+    height: 40px; /* Adjust the height to make the button circular */
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
 }
