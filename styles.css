@@ -48,34 +48,11 @@ header {
     height:  auto;
 }
 
-.projects {
-    text-align: center;
-    padding: 20px;
-    background-color: #323963;
-    position: relative;
-}
-
-.project-carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    margin: 20px 0;
-    position: relative;
-}
-
-.project-card {
-    flex: 1 0 100%;
-    max-width: 33.33%;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: #e0f7fa;
-    border-radius: 5px;
-    margin: 0 10px;
-}
 
 .slider-container {
     position: relative;
-    width: 80%;
+    width: 95%;
+    height: 50%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -95,6 +72,7 @@ header {
     width: 33.33%; /* Display 3 images at a time */
     height: auto;
     flex-shrink: 0;
+    padding: 10px;
 }
 
 .arrow {
