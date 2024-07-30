@@ -23,27 +23,35 @@ header {
     flex: 1;
 }
 
-.profile-picture {
-    width: 50px; /* Set the width of the photo */
-    height:  100px;
-    padding: 30px;
+.aboutme{
+    background-color: #e1daee;
+    display: flex;
+    justify-content: space-around; /* Aligns content to the right */
+    align-items: center; /*center photo and text verticaly within section*/
 }
 
-.aboutme{
-    background-color: #d31919;
-    display: flex;
-    justify-content: flex-end; /* Aligns content to the right */
+.aboutme-text{
+    text-align: left;
+    padding: 20px;
+    max-width: 40%;
+    min-width: 220px;
 }
+
+.profile-picture {
+    flex-basis: 34%;
+    padding: 20px;
+}
+
 
 .profile-picture img {
-    max-width: 1x;
-    height: auto;
+    width: 400px; /* Set the width of the photo */
+    height:  auto;
 }
 
 .projects {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #323963;
     position: relative;
 }
 
@@ -75,6 +83,9 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+
 }
 
 .prev {
