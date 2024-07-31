@@ -92,3 +92,50 @@ header h1 a:hover {
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow for photo */
 }
+
+/*css elements for infinite slider*/
+.container {
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    background: #eee;
+    display: flex;
+    min-width: 500px;
+    border: solid;
+    position: relative;
+    transition: left 0.3s;
+  }
+  
+  .slide {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  .slide1 {
+    background: #f3ca63;
+  }
+  
+  .slide2 {
+    background: #d06c65;
+  }
+  
+  .slide3 {
+    background: #6579d0;
+  }
+  
+  .slide4 {
+    background: #65d073;
+  }
+  
+  .slide5 {
+    background: #ba65d0;
+  }
+  
+  .btn {
+    margin: 2rem;
+  }
