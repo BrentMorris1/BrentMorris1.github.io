@@ -34,7 +34,7 @@ function sliderFunc() {
     let sliderBox = document.querySelector('.slider');
     let tapToRightBtn = document.querySelector('.btn');
     let index = 0;
-    sliderBox.style.width = '500px';
+    /*sliderBox.style.width = '500px'; let the slider be as big as the containg box*/ 
     sliderBox.style.left = '0px';
   
     function sliderNext() {
