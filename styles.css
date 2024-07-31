@@ -19,7 +19,7 @@ header {
     padding: 5px;
     background-color: var(--tan);
     font-family: "Lexend Deca", sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for drop shadow */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for drop shadow */
     position: fixed;
     transition: transform 0.4s ease-in-out; /* header drops down in 0.4s*/
     width: 100%;
@@ -36,7 +36,8 @@ header.hidden {
     flex-wrap: nowrap;
     justify-content: space-evenly; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    padding: 20px; /* Add padding to avoid content touching the edges */
+    padding-top: 5%;
+    /*padding: 20px; /* Add padding to avoid content touching the edges */
     text-align: center; /* Center text horizontally */
 }
 
