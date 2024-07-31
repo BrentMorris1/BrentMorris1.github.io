@@ -30,6 +30,18 @@ header.hidden {
     transition: transform 0.3s ease-in-out; /* header retracts in 0.3s*/
 }
 
+header h1 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the same color as the heading */
+    display: inline-block; /* Allow transform to work */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+header h1 a:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+}
+
+
 .aboutme {
     background-color: var(--white);
     display: flex;
