@@ -2,8 +2,8 @@
     --blue: #9BB2C0;
     --tan: #E0CFBF;
     --navy: #0A202E; 
-    --white: #fcfaf5;
-  }
+    --white: #fcfaf5; /*slightly off white*/
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -22,28 +22,37 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for drop shadow */
 }
 
-.aboutme{
+.aboutme {
     background-color: var(--white);
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center; /* Aligns content to the right */
-    align-items: center; /*center photo and text verticaly within section*/
-    
+    justify-content: space-evenly; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Add padding to avoid content touching the edges */
+    text-align: center; /* Center text horizontally */
 }
 
-.aboutme-text{
+.aboutme-text {
     text-align: left;
+    font-size: 20px;
     padding: 10px;
-    max-width: 400px;
+    max-width: 25%;
     min-width: 220px;
 }
 
-/* Styling for all photos*/
-.photo {
+.aboutme-img {
+    padding: 10px;
     margin: 20px;
     width: 25%; /* Adjust the width of the photo */
     min-width: 200px;
+    max-width: 450px;
+}
+
+
+/* Styling for all photos */
+.photo {
     height: auto; /* Maintain the aspect ratio */
+    width: 100%; /*Photo ocupies whole width of contaning block*/
     border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Increased blur radius and opacity */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow for photo */
 }
