@@ -2,7 +2,7 @@
     --blue: #9BB2C0;
     --tan: #E0CFBF;
     --navy: #0A202E; 
-    --white: #fcfaf5; /*slightly off white*/
+    --white: #fcfcfc; /*slightly off white*/
 }
 
 body {
@@ -20,6 +20,14 @@ header {
     background-color: var(--tan);
     font-family: "Lexend Deca", sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for drop shadow */
+    position: fixed;
+    transition: transform 0.4s ease-in-out; /* header drops down in 0.4s*/
+    width: 100%;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out; /* header retracts in 0.3s*/
 }
 
 .aboutme {
@@ -38,10 +46,25 @@ header {
     padding: 10px;
     max-width: 25%;
     min-width: 220px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* Specific styles for h3 and p inside .aboutme-text */
+.aboutme-text h3 {
+    font-size: 30px; /* Adjust font size for h3 */
+    font-weight: bold; /* Make h3 text bold */
+    margin-bottom: 10px; /* Add some space below h3 */
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.aboutme-text p {
+    font-size: 80%; /* Adjust font size for p */
+    line-height: 1.6; /* Improve readability with line-height */
+    font-family: "Inter", sans-serif;
 }
 
 .aboutme-img {
-    padding: 10px;
+    padding: 3%;
     margin: 20px;
     width: 25%; /* Adjust the width of the photo */
     min-width: 200px;
