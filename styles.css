@@ -1,153 +1,134 @@
 :root {
-    --blue: #9BB2C0;
-    --tan: #E0CFBF;
-    --navy: #0A202E; 
-    --white: #fcfcfc; /*slightly off white*/
+  --blue: #9BB2C0;
+  --tan: #E0CFBF;
+  --navy: #0A202E; 
+  --white: #fcfcfc; /*slightly off white*/
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--white);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background-color: var(--tan);
-    font-family: "Lexend Deca", sans-serif;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for drop shadow */
-    position: fixed;
-    transition: transform 0.4s ease-in-out; /* header drops down in 0.4s*/
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--tan);
+  font-family: "Lexend Deca", sans-serif;
+  position: fixed;
+  transition: transform 0.4s ease-in-out; /* header drops down in 0.4s*/
+  width: 100%;
+  z-index: 1000; /* Ensure header is on top */
 }
 
 header.hidden {
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out; /* header retracts in 0.3s*/
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out; /* header retracts in 0.3s*/
 }
 
 header h1 a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the same color as the heading */
-    display: inline-block; /* Allow transform to work */
-    transition: transform 0.3s ease; /* Smooth transition */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the same color as the heading */
+  display: inline-block; /* Allow transform to work */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
 header h1 a:hover {
-    transform: scale(1.1); /* Increase size by 10% */
+  transform: scale(1.1); /* Increase size by 10% */
 }
 
-
 .aboutme {
-    background-color: var(--white);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    padding-top: 5%;
-    /*padding: 20px; /* Add padding to avoid content touching the edges */
-    text-align: center; /* Center text horizontally */
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding-top: 5%;
+  text-align: center; /* Center text horizontally */
 }
 
 .aboutme-text {
-    text-align: left;
-    font-size: 20px;
-    padding: 10px;
-    max-width: 25%;
-    min-width: 220px;
-    font-family: "Lexend Deca", sans-serif;
+  text-align: left;
+  font-size: 20px;
+  padding: 10px;
+  max-width: 25%;
+  min-width: 220px;
+  font-family: "Lexend Deca", sans-serif;
 }
 
-/* Specific styles for h3 and p inside .aboutme-text */
 .aboutme-text h3 {
-    font-size: 30px; /* Adjust font size for h3 */
-    font-weight: bold; /* Make h3 text bold */
-    margin-bottom: 10px; /* Add some space below h3 */
-    font-family: "Lexend Deca", sans-serif;
+  font-size: 30px; /* Adjust font size for h3 */
+  font-weight: bold; /* Make h3 text bold */
+  margin-bottom: 10px; /* Add some space below h3 */
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .aboutme-text p {
-    font-size: 80%; /* Adjust font size for p */
-    line-height: 1.6; /* Improve readability with line-height */
-    font-family: "Inter", sans-serif;
+  font-size: 80%; /* Adjust font size for p */
+  line-height: 1.6; /* Improve readability with line-height */
+  font-family: "Inter", sans-serif;
 }
 
 .aboutme-img {
-    padding: 3%;
-    margin: 20px;
-    width: 25%; /* Adjust the width of the photo */
-    min-width: 200px;
-    max-width: 450px;
+  padding: 3%;
+  margin: 20px;
+  width: 25%; /* Adjust the width of the photo */
+  min-width: 200px;
+  max-width: 450px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-
-/* Styling for all photos */
 .photo {
-    height: auto; /* Maintain the aspect ratio */
-    width: 100%; /*Photo ocupies whole width of contaning block*/
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow for photo */
+  height: auto; /* Maintain the aspect ratio */
+  width: 100%; /* Photo occupies whole width of containing block */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Drop shadow for photo */
 }
 
-/*css elements for infinite slider*/
 .container {
-    max-width: 100%;
-    height: 500px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slider {
-    background: var(--white);
-    display: flex;
-    width: 100%;
-    height: 80%;
-    position: relative;
-    transition: left 0.3s;
-    overflow: hidden;
-    gap: 1%;
+  max-width: 100%;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
 
-  }
-  
-  .slide {
-    flex-basis: 30%;
-    height: 100%;
-  }
+.slider {
+  display: flex;
+  width: calc(100% * 7); /* Adjust according to the number of slides plus clones */
+  transition: left 0.3s;
+  position: absolute;
+  left: 0;
+}
 
-  /* do not require different styles for differnet slides
-  .slide1 {
-    background: #f3ca63;
-  }
-  
-  .slide2 {
-    background: #d06c65;
-  }
-  
-  .slide3 {
-    background: #6579d0;
-  }
-  
-  .slide4 {
-    background: #65d073;
-  }
-  
-  .slide5 {
-    background: #ba65d0;
-  }
-    */
-  
-  .btn {
-    margin: 2rem;
-  }
+.slide {
+  flex: 1 0 100%; /* Ensure each slide takes up the full width */
+  height: 100%;
+  box-sizing: border-box;
+}
 
-  .proj-img { 
-    width: 100%; /*width of photo fills slide element*/
-    height: 10%; /*photo height maintains aspect ratio */
-    max-width: 450px;
-    border-radius: 5px; /* Rounded corners */
+.btn {
+  margin: 2rem;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure button is on top */
+}
+
+.proj-img { 
+  width: 100%; /* Width of photo fills slide element */
+  height: 100%; /* Photo height maintains aspect ratio */
+  max-width: 450px;
+  border-radius: 5px; /* Rounded corners */
 }

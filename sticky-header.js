@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-/* Next I want to make an infinate slider as explined here https://stackoverflow.com/questions/73925164/how-to-make-a-slider-loop-with-js */
+/* Next I want to make an infinate slider as explined here https://stackoverflow.com/questions/73925164/how-to-make-a-slider-loop-with-js 
 
 function sliderFunc() {
     let sliderBox = document.querySelector('.slider');
     let tapToRightBtn = document.querySelector('.btn');
     let index = 0;
-    /*sliderBox.style.width = '500px'; let the slider be as big as the containg box*/ 
+    /*sliderBox.style.width = '500px'; let the slider be as big as the containg box* 
     sliderBox.style.left = '0px'; //default horozontal scroll position to 0
   
     function sliderNext() {
@@ -55,3 +55,4 @@ function sliderFunc() {
     tapToRightBtn.addEventListener('click', sliderNext);
   }
   sliderFunc();
+  */
