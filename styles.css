@@ -90,45 +90,56 @@ header h1 a:hover {
 }
 
 .container {
-  max-width: 100%;
-  height: 500px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  padding: 20px;
-}
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    background: #eee;
+    display: flex;
+    width: 100%;
+    height: 900px;
+    border: solid;
+    position: relative;
+    transition: left 0.3s;
+  }
+  
+  .slide {
+    width: 600px;
+    height: 300px;
+    margin-right: 50px;
+  }
+  
+  .slide1 {
+    background: #f3ca63;
+  }
+  
+  .slide2 {
+    background: #d06c65;
+  }
+  
+  .slide3 {
+    background: #6579d0;
+  }
+  
+  .slide4 {
+    background: #65d073;
+  }
+  
+  .slide5 {
+    background: #ba65d0;
+  }
+  
+  .btn {
+    margin: 2rem;
+  }
 
-.slider {
-  display: flex;
-  width: calc(100% * 7); /* Adjust according to the number of slides plus clones */
-  transition: left 0.3s;
-  position: absolute;
-  left: 0;
-}
-
-.slide {
-  flex: 1 0 100%; /* Ensure each slide takes up the full width */
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.btn {
-  margin: 2rem;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: var(--blue);
-  color: var(--white);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000; /* Ensure button is on top */
-}
-
-.proj-img { 
-  width: 100%; /* Width of photo fills slide element */
-  height: 100%; /* Photo height maintains aspect ratio */
-  max-width: 450px;
-  border-radius: 5px; /* Rounded corners */
+  .proj-img {
+    
+    width: 25%; /* Adjust the width of the photo */
+    min-width: 400px;
+    max-width: 450px;
 }

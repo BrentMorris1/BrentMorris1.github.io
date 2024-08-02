@@ -34,14 +34,13 @@ function sliderFunc() {
     let sliderBox = document.querySelector('.slider');
     let tapToRightBtn = document.querySelector('.btn');
     let index = 0;
-    /*sliderBox.style.width = '500px'; let the slider be as big as the containg box* 
-    sliderBox.style.left = '0px'; //default horozontal scroll position to 0
+    /*sliderBox.style.width = '500px'; let the slider be as big as the containg box*/ 
+    sliderBox.style.left = '0px';
   
     function sliderNext() {
       setTimeout(() => {
         index++;
         let child = sliderBox.querySelector(`div:nth-child(${index})`);
-        //let childWidth = sliderBox.querySelector(`div:nth-child(${index})`).offsetWidth;// width of the child
         let cloneNode = child .cloneNode(true);
         sliderBox.style.width = `${(5 + index) * 100}px`;
         sliderBox.appendChild(cloneNode);
