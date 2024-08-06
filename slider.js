@@ -5,7 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let slideWidth = slides[0].offsetWidth; // Assume all slides are the same width
     let index = 1; // Start at the first cloned slide
 
+    //initialization function that only runs when the page is loaded
     function cloneSlides() {
+        // set slide width so 3 fit on the screen
+        let desiredWidth = (sliderBox.offsetWidth * 0.334) + 'px';
+        slides.forEach(slide => {
+            slide.style.width = desiredWidth;
+        });
+
+        //Create coppies of the 
         let firstSlide = slides[0].cloneNode(true);
         let lastSlide = slides[slides.length - 1].cloneNode(true);
         sliderBox.appendChild(firstSlide);
