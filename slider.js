@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let container = document.querySelector('.container');
     let sliderBox = document.querySelector('.slider');
     let tapToRightBtn = document.querySelector('.btn');
     let slides = Array.from(sliderBox.querySelectorAll('.slide'));
@@ -36,11 +37,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to run on window resize
     function handleResize() {
     // set slide width so 3 fit on the screen
-    slideWidth = (window.innerWidth * 0.334);
+    slideWidth = (container.offsetWidth * 0.334);
     slides.forEach(slide => {
-        slide.style.width = slideWidth + 'px';
+        slide.style.offsetWidth = slideWidth + 'px';
     });
-    //sliderBox.style.width = (slideWidth * 7) + 'px'; //replace slide width * 7 with an expression that varries with the number of slides
     sliderBox.style.width = ((slides.length + 2) * slideWidth) + 'px'; //replace slide width * 7 with an expression that varries with the number of slides
 }
 
