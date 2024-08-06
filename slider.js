@@ -36,13 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to run on window resize
     function handleResize() {
     // set slide width so 3 fit on the screen
-    slideWidth = (window.innerWidth * 0.334) + 'px';
+    slideWidth = (window.innerWidth * 0.334);
     slides.forEach(slide => {
-        slide.style.width = slideWidth;
+        slide.style.width = slideWidth + 'px';
     });
-    //resize the flex box element containing all the slide
-    //sliderBox.style.offsetWidth = `${(slides.length + 2) * slideWidth}px`; // Adjust width of flex box to hold all slides without compression
-    sliderBox.style.width = 5000+ 'px';
+    //sliderBox.style.width = (slideWidth * 7) + 'px'; //replace slide width * 7 with an expression that varries with the number of slides
+    sliderBox.style.width = ((slides.length + 2) * slideWidth) + 'px'; //replace slide width * 7 with an expression that varries with the number of slides
 }
 
 
