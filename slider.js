@@ -7,18 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //initialization function that only runs when the page is loaded
     function cloneSlides() {
-        // set slide width so 3 fit on the screen
-        let desiredWidth = (sliderBox.offsetWidth * 0.334) + 'px';
-        slides.forEach(slide => {
-            slide.style.width = desiredWidth;
-        });
+        
+        handleResize();//dimention slider panels as soon as document opens
 
         //Create coppies of the 
         let firstSlide = slides[0].cloneNode(true);
         let lastSlide = slides[slides.length - 1].cloneNode(true);
         sliderBox.appendChild(firstSlide);
         sliderBox.insertBefore(lastSlide, sliderBox.firstChild);
-        sliderBox.style.width = `${(slides.length + 2) * slideWidth}px`; // Adjust width
     }
 
     function sliderNext() {
@@ -37,6 +33,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Function to run on window resize
+    function handleResize() {
+    // set slide width so 3 fit on the screen
+    slideWidth = (window.innerWidth * 0.334) + 'px';
+    slides.forEach(slide => {
+        slide.style.width = slideWidth;
+    });
+    //resize the flex box element containing all the slide
+    //sliderBox.style.offsetWidth = `${(slides.length + 2) * slideWidth}px`; // Adjust width of flex box to hold all slides without compression
+    sliderBox.style.width = 5000+ 'px';
+}
+
+
+
     cloneSlides();
     tapToRightBtn.addEventListener('click', sliderNext);
+    window.addEventListener('resize', handleResize); //runs handleresize function when window is resized
 });
