@@ -11,11 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         
         handleResize();//dimention slider panels as soon as document opens
 
-        //Create coppies of the 
+        //Create coppies of the first 3 slides and append them to the end of the felxbox
         let firstSlide = slides[0].cloneNode(true);
-        let lastSlide = slides[slides.length - 1].cloneNode(true);
+        let secondSlide = slides[1].cloneNode(true);
+        let thirdSlide = slides[2].cloneNode(true);
         sliderBox.appendChild(firstSlide);
-        sliderBox.insertBefore(lastSlide, sliderBox.firstChild);
+        sliderBox.appendChild(secondSlide);
+        sliderBox.appendChild(thirdSlide);
     }
 
     function sliderNext() {
