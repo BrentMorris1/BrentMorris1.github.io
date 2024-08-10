@@ -93,9 +93,9 @@ header h1 a:hover {
 
 /* Code for projects slider*/
 .container {
-    width: 100%; /*container enclosing flex box is always the exact width of the screen*/
+    width: 98%; /*container enclosing flex box is always the exact width of the screen*/
     height: auto; /* enherit 900px height from the .slider container*/
-    margin: auto;
+    padding: 1%;
     overflow: hidden;
     position: relative;
   }
@@ -140,7 +140,6 @@ header h1 a:hover {
 
   .proj-img {
     
-    width: 25%; /* Adjust the width of the photo */
-    min-width: 400px;
-    max-width: 450px;
+    /*width: 25%; /* Adjust the width of the photo */
+    /*min-width: 400px;*/
 }
