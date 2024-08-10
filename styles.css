@@ -109,9 +109,11 @@ header h1 a:hover {
   }
   
   .slide {
-    height: 500px;
+    height: 50%;
     /*margin-right: 50px;*/
     overflow: hidden;
+    border-radius: 5px; /*rounded corners*/
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Drop shadow for photo */
   }
   
   .slide1 {
@@ -140,6 +142,4 @@ header h1 a:hover {
 
   .proj-img {
     
-    /*width: 25%; /* Adjust the width of the photo */
-    /*min-width: 400px;*/
 }
