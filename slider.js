@@ -43,10 +43,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to run on window resize
     function handleResize() {
+    //allSlides object includes the coppied slides
+    const allSlides = document.querySelectorAll('.slider .slide'); // Assuming slides have a class 'slide'
     // set slide width so 3 fit on the screen
     slideWidth = (container.offsetWidth * 0.306667);
     marginWidth = (container.offsetWidth *0.0101) // the 0.0001 prevents the 4th slide from bleeding over in some circumstances
-    slides.forEach(slide => {
+    
+    //this loop is not modifying the slide coppies.
+    allSlides.forEach(slide => {
         // do not use this code because it includes the region hidden by the scroll bar in the viewport width
         //slide.style.width = '30.6666vw';
         //slide.style.margin = '1vw';
@@ -55,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     //No harm in having the width of the slider box larger than it needs to be
     //if the box is too small it will shrink the project slides from 33% of screen width
-    sliderBox.style.width = ((slides.length + 10) * slideWidth) + 'px'; //replace slide width * 7 with an expression that varries with the number of slides
+    sliderBox.style.width = ((slides.length + 4) * container.offsetWidth * 0.34) + 'px'; //replace slide width * 7 with an expression that varries with the number of slides
 }
 
 
