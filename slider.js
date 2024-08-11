@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let tapToRightBtn = document.querySelector('.btn');
     let slides = Array.from(sliderBox.querySelectorAll('.slide'));
     let slideWidth = slides[0].offsetWidth; // Assume all slides are the same width
-    let index = 1; // Start at the first cloned slide
+    let index = 0; //index represents the slide offset from loaded position
 
     //initialization function that only runs when the page is loaded
     function cloneSlides() {
@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function sliderNext() {
         index++;
+        //slide the slider box position over
+        sliderBox.style.left
+        //execute when at end 
         if (index >= slides.length + 1) { // When reaching the last slide
             sliderBox.style.transition = 'none'; // Disable transition
             index = 1; // Move to the first cloned slide
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 sliderBox.style.left = `-${index * slideWidth}px`;
             }, 0);
         } else {
-            sliderBox.style.left = `-${index * slideWidth}px`;
+            sliderBox.style.left = `-${index * (container.offsetWidth*0.3334)}px`;
         }
     }
 
