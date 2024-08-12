@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let container = document.querySelector('.container');
     let sliderBox = document.querySelector('.slider');
     let tapToRightBtn = document.querySelector('.btn');
+    let tapToLeftBtn = document.querySelector('.prev-btn'); // New Previous button
     let slides = Array.from(sliderBox.querySelectorAll('.slide'));
     let slideWidth = slides[0].offsetWidth; // Assume all slides are the same width
     let index = 0; //index represents the slide offset from loaded position
@@ -55,6 +56,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
+    //runs when the previous button is pressed
+    function sliderPrevious() {
+        if (isAnimating) return; // Prevent multiple clicks during animation
+        isAnimating = true;
+        //check if index = 0
+
+        if (index == 0){
+            sliderBox.style.transition = 'none'; // Disable transition
+            index = slides.length +1 ; // Reset index to rightmost position
+            sliderBox.style.left = `-${index * slideWidth}px`;
+        }
+
+        //after checking the current index we are certain that it is safe to slide to the right
+        index--;
+        sliderBox.style.transition = 'left 0.5s'; // Disable transition
+        sliderBox.style.left = `-${ index * slides[0].offsetWidth}px`;
+        setTimeout(() => {
+            isAnimating = false; // Re-enable clicking after animation
+        }, 500);
+    }
+
     // Function to run on window resize
     function handleResize() {
     //allSlides object includes the coppied slides
@@ -83,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     cloneSlides();
+    tapToLeftBtn.addEventListener('click', sliderPrevious); // Add event listener for Previous button
     tapToRightBtn.addEventListener('click', sliderNext);
     window.addEventListener('resize', handleResize); //runs handleresize function when window is resized
     
