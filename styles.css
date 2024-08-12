@@ -152,7 +152,8 @@ header h1 a:hover {
     align-items: center;
     justify-content: center;
     position: absolute; /* Position absolutely within the container */
-    top: 45%; /* Center vertically, Create formula to acount for height of element*/
+    top: 50%; /* Center vertically, Create formula to acount for height of element*/
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
     cursor: pointer;
     z-index: 10; /* Ensure buttons are above other content */
     transition: transform 0.2s ease; /* Smooth scaling transition */
@@ -176,5 +177,6 @@ header h1 a:hover {
 
 .prev-btn:hover, .btn:hover {
     transform: scale(1.05); /* Swell to 105% of original size */
+    transform: translateY(-50%) scale(1.05); /* Swell to 105% of original size without shifting */
     
 }
