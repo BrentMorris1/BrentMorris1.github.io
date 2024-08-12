@@ -139,3 +139,46 @@ header h1 a:hover {
   .btn {
     margin: 2rem;
   }
+
+  /*Added projects section arrows for forward and back buttons*/
+  /* Style for the Next and Previous buttons */
+.prev-btn, .btn {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid var(--navy); /* Navy border */
+  color: var(--navy); /* Navy color for the arrow */
+  border-radius: 50%; /* Circular shape */
+  width: 50px; /* Size of the circle */
+  height: 50px; /* Size of the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Position absolutely within the container */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+  cursor: pointer;
+  z-index: 10; /* Ensure buttons are above other content */
+}
+
+.prev-btn::before {
+  content: '←'; /* Left arrow */
+  font-size: 24px; /* Arrow size */
+}
+
+.btn::before {
+  content: '→'; /* Right arrow */
+  font-size: 24px; /* Arrow size */
+}
+
+.prev-btn {
+  left: 10px; /* Position on the left */
+}
+
+.btn {
+  right: 10px; /* Position on the right */
+}
+
+/* Add hover effects */
+.prev-btn:hover, .btn:hover {
+  background-color: var(--navy); /* Navy background on hover */
+  color: var(--white); /* White arrow on hover */
+}
