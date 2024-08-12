@@ -144,44 +144,37 @@ header h1 a:hover {
     background-color: rgba(245, 241, 241, 0.39); /* Semi-transparent background */
     backdrop-filter: blur(5px); /* Apply the blur effect */
     border: 0.2em solid rgba(0, 0, 0, 0.637); /* Semi-transparent border */
-    color: var(--navy); /* Navy color for the arrow */
+    color: black; /* Solid black color for the arrow */
     border-radius: 50%; /* Circular shape */
-    width: 5em; /* Size of the circle em dimentions are relitive to the size of the text hight of current font*/
+    width: 5em; /* Size of the circle */
     height: 5em; /* Size of the circle */
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute; /* Position absolutely within the container */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    top: 45%; /* Center vertically, Create formula to acount for height of element*/
     cursor: pointer;
     z-index: 10; /* Ensure buttons are above other content */
+    transition: transform 0.2s ease; /* Smooth scaling transition */
+    transform-origin: center;
 }
 
-.prev-btn::before {
-  font-size: 24px; /* Arrow size */
-  font-family: "Lexend Deca", sans-serif;
-}
-
-.btn::before {
-  font-size: 24px; /* Arrow size */
-  font-family: "Lexend Deca", sans-serif;
+.prev-btn::before, .btn::before {
+    content: ''; /* Ensure content is rendered */
+    font-size: 80px; /* Increase arrow size */
+    font-family: "Lexend Deca", sans-serif;
+    color: black; /* Solid black color for the arrow */
 }
 
 .prev-btn {
-  left: 10px; /* Position on the left */
+    left: 10px; /* Position on the left */
 }
 
 .btn {
-  right: 10px; /* Position on the right */
+    right: 10px; /* Position on the right */
 }
 
-/* Add hover effects */
 .prev-btn:hover, .btn:hover {
-  transform: scale(1.1); /* Increase size by 10% */
-  color: var(--white); /* White arrow on hover */
-
-  position: absolute; /* Position absolutely within the container */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    transform: scale(1.05); /* Swell to 105% of original size */
+    
 }
