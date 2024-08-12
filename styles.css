@@ -94,7 +94,7 @@ header h1 a:hover {
 /* Code for projects slider*/
 .container {
     width: 98%; /*container enclosing flex box is always the exact width of the screen*/
-    height: auto; /* enherit 900px height from the .slider container*/
+    height: 60%; /* enherit 900px height from the .slider container*/
     padding: 1%;
     overflow: hidden;
     position: relative;
@@ -103,13 +103,14 @@ header h1 a:hover {
   /*This element is the flexbox container*/
   .slider {
     display: flex;
-    height: 900px;
+    height: 100%;
     position: relative;
     left: 0;
+    align-items: center;
   }
   
   .slide {
-    height: 50%;
+    height: 100%; /*You need to set height as 100% so the forward and back buttons are vertical centered on cards*/
     /*margin-right: 50px;*/
     overflow: hidden;
     border-radius: 5px; /*rounded corners*/
@@ -135,38 +136,36 @@ header h1 a:hover {
   .slide5 {
     background: #ba65d0;
   }
-  
-  .btn {
-    margin: 2rem;
-  }
 
   /*Added projects section arrows for forward and back buttons*/
   /* Style for the Next and Previous buttons */
-.prev-btn, .btn {
-  background-color: transparent; /* Transparent background */
-  border: 2px solid var(--navy); /* Navy border */
-  color: var(--navy); /* Navy color for the arrow */
-  border-radius: 50%; /* Circular shape */
-  width: 50px; /* Size of the circle */
-  height: 50px; /* Size of the circle */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute; /* Position absolutely within the container */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
-  cursor: pointer;
-  z-index: 10; /* Ensure buttons are above other content */
+
+  .prev-btn, .btn {
+    background-color: rgba(245, 241, 241, 0.39); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply the blur effect */
+    border: 0.2em solid rgba(0, 0, 0, 0.637); /* Semi-transparent border */
+    color: var(--navy); /* Navy color for the arrow */
+    border-radius: 50%; /* Circular shape */
+    width: 5em; /* Size of the circle em dimentions are relitive to the size of the text hight of current font*/
+    height: 5em; /* Size of the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Position absolutely within the container */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above other content */
 }
 
 .prev-btn::before {
-  content: '←'; /* Left arrow */
   font-size: 24px; /* Arrow size */
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .btn::before {
-  content: '→'; /* Right arrow */
   font-size: 24px; /* Arrow size */
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .prev-btn {
@@ -179,6 +178,10 @@ header h1 a:hover {
 
 /* Add hover effects */
 .prev-btn:hover, .btn:hover {
-  background-color: var(--navy); /* Navy background on hover */
+  transform: scale(1.1); /* Increase size by 10% */
   color: var(--white); /* White arrow on hover */
+
+  position: absolute; /* Position absolutely within the container */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
