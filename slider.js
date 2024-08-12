@@ -64,17 +64,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (index == 0){
             sliderBox.style.transition = 'none'; // Disable transition
-            index = slides.length +1 ; // Reset index to rightmost position
-            sliderBox.style.left = `-${index * slideWidth}px`;
+            index = slides.length; // Reset index to rightmost position (length is the index of the last element in the aray plus 1)
+            sliderBox.style.left = `-${index * slides[0].offsetWidth}px`;
         }
 
-        //after checking the current index we are certain that it is safe to slide to the right
+     //after checking the current index we are certain that it is safe to slide to the right
+     setTimeout(() =>{//if this delay is not included then the abrupt loop transition displays as a slide
         index--;
-        sliderBox.style.transition = 'left 0.5s'; // Disable transition
+        sliderBox.style.transition = 'left 0.5s';
         sliderBox.style.left = `-${ index * slides[0].offsetWidth}px`;
         setTimeout(() => {
             isAnimating = false; // Re-enable clicking after animation
         }, 500);
+     },1);   
+     
     }
 
     // Function to run on window resize
