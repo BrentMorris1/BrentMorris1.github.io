@@ -82,10 +82,10 @@ header h1 a:hover {
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.photo {
+.photo { /*Sets the style of the headshot photo*/
   height: auto; /* Maintain the aspect ratio */
   width: 100%; /* Photo occupies whole width of containing block */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px; /* Rounded corners on image */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Drop shadow for photo */
 }
 
@@ -94,7 +94,7 @@ header h1 a:hover {
 /* Code for projects slider*/
 .container {
     width: 98%; /*container enclosing flex box is always the exact width of the screen*/
-    height: 60%; /* enherit 900px height from the .slider container*/
+    height: 60vh; /*The normal percentage unit dose not work here */
     padding: 1%;
     overflow: hidden;
     position: relative;
@@ -112,11 +112,13 @@ header h1 a:hover {
   .slide {
     height: 100%; /*You need to set height as 100% so the forward and back buttons are vertical centered on cards*/
     /*margin-right: 50px;*/
-    overflow: hidden;
+    overflow: clip;
     border-radius: 5px; /*rounded corners*/
     /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Drop shadow for photo */
   }
   
+  /*
+  Difrent colored slides used for debugging
   .slide1 {
     background: #f3ca63;
   }
@@ -136,6 +138,7 @@ header h1 a:hover {
   .slide5 {
     background: #ba65d0;
   }
+    */
 
   /*Added projects section arrows for forward and back buttons*/
   /* Style for the Next and Previous buttons */
@@ -179,4 +182,19 @@ header h1 a:hover {
     transform: scale(1.05); /* Swell to 105% of original size */
     transform: translateY(-50%) scale(1.05); /* Swell to 105% of original size without shifting */
     
+}
+
+
+.proj-img {
+  height: 100%; /* Ensure proj-img box takes full height of the slide */
+  overflow: hidden; /* Hide any overflow of the proj-photo */
+  border-radius: 10px; /* Rounded corners on slider images */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Horizontally center the image */
+}
+
+.proj-photo {
+  height: 100%; /* Fit the height of the containing box */
+  width: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure proper layout behavior */ 
 }
