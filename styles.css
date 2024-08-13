@@ -251,7 +251,7 @@ header h1 a:hover {
 /*bellow content pertains to the footer*/
 
 footer {
-  background-color: var(--navy); /* Dark background for footer */
+  background-color: black; /* Dark background for footer */
   color: var(--white); /* Light text color */
   padding: 20px;
   font-family: "Inter", sans-serif;
@@ -259,6 +259,7 @@ footer {
 
 .footer-content {
   display: flex;
+  height:10vh;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
@@ -269,23 +270,39 @@ footer {
   text-align: left;
 }
 
-.download-buttons {
-  flex-basis: 50%;
-  text-align: right;
+.download-buttons {/*This is a flexbox element that encloses both download buttons*/
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
 }
 
-.download-buttons a {
-  display: inline-block;
+.download-buttons a { 
+  display: flex;
+  align-items: center;
   background-color: var(--white); /* Button background color */
   color: black; /* Button text color */
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 1px;
   border-radius: 20px;
   text-decoration: none;
+  text-align: right;
   font-weight: bold;
   transition: transform 0.2s ease;
+  height: 40px;
+  width:fit-content ;
 }
 
 .download-buttons a:hover {
   transform: scale(1.05); /* Increase size by 5% */
+}
+
+.down-icon{
+  height: 80%;
+  width: auto;
+  padding: 10px;
+}
+
+.download-buttons a text {
+  padding-left: 10px; /* Padding around the text */
+  font-family: "Lexend Deca", sans-serif;
 }

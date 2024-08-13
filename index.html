@@ -104,9 +104,16 @@
           <p>Email: brent.morris@example.com</p>
           <p>Phone: (123) 456-7890</p>
       </div>
-      <div class="download-buttons">
-          <a href="resume.pdf" class="download-btn" download>Resume</a>
-          <a href="portfolio.pdf" class="download-btn" download>Portfolio</a>
+
+      <div class="download-buttons"> <!-- This is a flexbox element that encloses both download buttons-->
+          <a href="resume.pdf" class="download-btn" download>
+            <text>Resume</text>
+            <img src="download-file-round-icon.svg" alt="Download Portfolio Icon" class = "down-icon"> 
+          </a>
+          <a href="portfolio.pdf" class="download-btn" download>
+            <text>Portfolio</text>
+            <img src="download-file-round-icon.svg" alt="Download Portfolio Icon" class = "down-icon"> 
+          </a>
       </div>
   </div>
 </footer>
