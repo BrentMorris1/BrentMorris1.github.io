@@ -191,9 +191,9 @@ header h1 a:hover {
 
 
 .proj-img {
+  position: relative;
   height: 100%; /* Allow enough room for 1.1 times scale on hover */
   overflow: hidden; /* Hide any overflow of the proj-photo */
-  border-radius: 10px; /* Rounded corners on slider images */
   display: flex; /* Use flexbox to center the image */
   justify-content: center; /* Horizontally center the image */
   align-items: center; /*verticaly center items*/
@@ -210,4 +210,16 @@ header h1 a:hover {
 .proj-img:hover{
   filter: saturate(100%);
   transform: scale(1.1); /* Swell to 105% of original size without shifting */
+}
+
+.proj-img h1{
+  text-align: center; /*Center the text*/
+  text-decoration: none; /* Remove underline */
+  color: var(--white); /* Use the same color as the heading */
+  display: inline-block; /* Allow transform to work */
+  position:absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%); /* Center horizontally */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
