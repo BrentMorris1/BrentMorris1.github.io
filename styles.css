@@ -1,7 +1,7 @@
 :root {
   --blue: #9BB2C0;
   --tan: #E0CFBF;
-  --navy: #0A202E; 
+  --navy: #04111a; 
   --white: #fcfcfc; /*slightly off white*/
 }
 
@@ -247,4 +247,45 @@ header h1 a:hover {
 .Projects-pannel h1{
   font-size: 30px; /* Adjust font size for h3 */
   font-weight: bold; /* Make h3 text bold */
+}
+/*bellow content pertains to the footer*/
+
+footer {
+  background-color: var(--navy); /* Dark background for footer */
+  color: var(--white); /* Light text color */
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.contact-info {
+  flex-basis: 50%;
+  text-align: left;
+}
+
+.download-buttons {
+  flex-basis: 50%;
+  text-align: right;
+}
+
+.download-buttons a {
+  display: inline-block;
+  background-color: var(--white); /* Button background color */
+  color: black; /* Button text color */
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.download-buttons a:hover {
+  transform: scale(1.05); /* Increase size by 5% */
 }
