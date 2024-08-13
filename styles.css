@@ -265,9 +265,15 @@ footer {
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.contact-info {
-  flex-basis: 50%;
-  text-align: left;
+.contact-info-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-info{
+  display:flex;
+  height: auto;
 }
 
 .download-buttons {/*This is a flexbox element that encloses both download buttons*/
@@ -296,7 +302,7 @@ footer {
   transform: scale(1.05); /* Increase size by 5% */
 }
 
-.down-icon{
+.icon{
   height: 80%;
   width: auto;
   padding: 10px;
