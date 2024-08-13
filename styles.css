@@ -231,3 +231,20 @@ header h1 a:hover {
 .proj-img:hover h1 {
   opacity: 0; /* Hide the text on hover */
 }
+
+.Projects-pannel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  font-family: "Lexend Deca", sans-serif;
+  position: relative;
+  width: auto;
+}
+
+.Projects-pannel h1{
+  font-size: 30px; /* Adjust font size for h3 */
+  font-weight: bold; /* Make h3 text bold */
+}
