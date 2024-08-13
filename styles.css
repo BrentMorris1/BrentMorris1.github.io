@@ -191,15 +191,23 @@ header h1 a:hover {
 
 
 .proj-img {
-  height: 100%; /* Ensure proj-img box takes full height of the slide */
+  height: 100%; /* Allow enough room for 1.1 times scale on hover */
   overflow: hidden; /* Hide any overflow of the proj-photo */
   border-radius: 10px; /* Rounded corners on slider images */
   display: flex; /* Use flexbox to center the image */
   justify-content: center; /* Horizontally center the image */
+  align-items: center; /*verticaly center items*/
+  filter: saturate(60%);
+  transition: transform 0.4s, filter 0.4s ease; /* Smooth scaling and colorize transition */
 }
 
 .proj-photo {
-  height: 100%; /* Fit the height of the containing box */
+  height: 90%; /* Fit the height of the containing box */
   width: auto; /* Maintain the aspect ratio */
   display: block; /* Ensure proper layout behavior */ 
+}
+
+.proj-img:hover{
+  filter: saturate(100%);
+  transform: scale(1.1); /* Swell to 105% of original size without shifting */
 }
