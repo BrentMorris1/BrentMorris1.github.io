@@ -172,7 +172,7 @@ header h1 a:hover {
   background-image: url('chevron-left-icon.svg'); /* Path to your SVG file */
   background-size: 25%; /* Adjust the size of the SVG icon */
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 45% 50%; /*this positioning looks more centered than true centered*/
 }
 
 .btn {
@@ -180,7 +180,7 @@ header h1 a:hover {
   background-image: url('chevron-right-icon.svg'); /* Path to your SVG file */
   background-size: 25%; /* Adjust the size of the SVG icon */
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 55% 50%; /*this positioning looks more centered than true centered*/
 }
 
 .prev-btn:hover, .btn:hover {
