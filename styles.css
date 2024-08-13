@@ -212,16 +212,22 @@ header h1 a:hover {
 .proj-img:hover{
   filter: saturate(100%);
   transform: scale(1.1); /* Swell to 105% of original size without shifting */
+  cursor: pointer;
 }
 
 .proj-img h1{
   text-align: center; /*Center the text*/
   text-decoration: none; /* Remove underline */
   color: var(--white); /* Use the same color as the heading */
+  text-shadow: rgb(75, 75, 75) 2px 2px 2px;
   display: inline-block; /* Allow transform to work */
   position:absolute;
   left: 50%;
   top: 20%;
   transform: translateX(-50%); /* Center horizontally */
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: opacity 0.2s ease; /* Smooth transition */
+}
+
+.proj-img:hover h1 {
+  opacity: 0; /* Hide the text on hover */
 }
