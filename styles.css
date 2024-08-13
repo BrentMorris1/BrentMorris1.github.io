@@ -199,6 +199,8 @@ header h1 a:hover {
   align-items: center; /*verticaly center items*/
   filter: saturate(60%);
   transition: transform 0.4s, filter 0.4s ease; /* Smooth scaling and colorize transition */
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 4vh; /* Adjust font size for h3 */
 }
 
 .proj-photo {
