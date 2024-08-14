@@ -333,3 +333,21 @@ footer {
   padding-left: 10px; /* Padding around the text */
   font-family: "Lexend Deca", sans-serif;
 }
+
+/*Contains all work experiences*/
+.employment-box{
+  display: flex;
+}
+
+/*One work term and education*/
+.employment{
+  display: flex;
+  padding: 5px;
+
+}
+
+/*formats the logo for work and school*/
+.work-logo{
+  height: 12vh;
+
+}
