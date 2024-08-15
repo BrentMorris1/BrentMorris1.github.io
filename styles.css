@@ -335,19 +335,63 @@ footer {
 }
 
 /*Contains all work experiences*/
-.employment-box{
-  display: flex;
+.grid-container {
+  display: grid;
+  color: var(--white);
+  grid-template-columns: [logo] 15% [tite] auto [bullet] auto;
+  column-gap: 10px;
+  row-gap: 20px;
+  width: 85vw;
+  padding: 5vw;
 }
 
-/*One work term and education*/
-.employment{
+/*Styling for job logo section*/
+.grid-logo {
   display: flex;
-  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/*Styling for job title section*/
+.grid-job-title {
+  color: black;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+
+.grid-job-title h2{
+  margin: 2px;
+
+}
+.grid-job-title h3{
+  margin: 2px;
+  font-size: smaller;
+  
+}
+.grid-job-title h4{
+  margin: 2px;
+  font-size: small;
+}
+
+/*Styling for job responsablities section*/
+.grid-job-discription {
+  color: black;
+  display: flex;
+  justify-content: left;
+  font-size: 20px;
+  padding: 10px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
 
 }
 
 /*formats the logo for work and school*/
 .work-logo{
-  height: 12vh;
-
+  width:100%
 }
