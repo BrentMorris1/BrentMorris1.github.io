@@ -342,7 +342,8 @@ footer {
   column-gap: 10px;
   row-gap: 20px;
   width: 85vw;
-  padding: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 /*Styling for job logo section*/
@@ -388,10 +389,23 @@ footer {
   padding: 10px;
   text-align: left;
   font-family: "Roboto", sans-serif;
+  font-size: medium;
 
 }
 
 /*formats the logo for work and school*/
 .work-logo{
   width:100%
+}
+
+.employment-or-school{
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.employment-or-school h1{
+  font-size: 30px; /* Adjust font size for h3 */
+  font-weight: bold; /* Make h3 text bold */
+  font-family: "Lexend Deca", sans-serif;
+  margin: 40px;
 }
