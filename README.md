@@ -6,3 +6,4 @@ Curentley known issues include
 - Add back button to project pages
 - Add photos to project pages
 - Add PDF coppy of Portfolio
+- need to horizonalty center employment and education

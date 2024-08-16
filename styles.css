@@ -371,6 +371,9 @@ footer {
   background-color: var(--employmentColor);
   border-top-left-radius: var(--employmentRounding);
   border-bottom-left-radius: var(--employmentRounding);
+  /* Basic box shadow */
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 /*Styling for job title section*/
@@ -384,6 +387,9 @@ footer {
   text-align: left;
   font-family: "Roboto", sans-serif;
   background-color: var(--employmentColor);
+  /* Basic box shadow */
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .grid-job-title h2{
@@ -413,6 +419,9 @@ footer {
   background-color: var(--employmentColor);
   border-top-right-radius: var(--employmentRounding);
   border-bottom-right-radius: var(--employmentRounding);
+  /* Basic box shadow */
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 /*formats the logo for work and school*/
