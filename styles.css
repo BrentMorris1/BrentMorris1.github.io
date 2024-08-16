@@ -354,6 +354,7 @@ footer {
 /*Contains all work experiences*/
 .grid-container {
   display: grid;
+  grid-template-columns: subgrid; /*Enable collumn information from this grid to be passed to each row grid */
   color: var(--white);
   grid-template-columns: [logo] 15% [tite] auto [bullet] auto;
   row-gap: 20px;
@@ -362,17 +363,24 @@ footer {
   padding-right: 5vw;
 }
 
+
+.row-container {
+  grid-column: 1 / -1; /* Span all 3 columns */
+  display: grid;
+  grid-template-columns: subgrid; /* Inherit column divisions from parent grid */
+  grid-template-rows: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+  border-radius: 10px;
+  background-color: var(--employmentColor);
+}
+
+
 /*Styling for job logo section*/
 .grid-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: var(--employmentColor);
-  border-top-left-radius: var(--employmentRounding);
-  border-bottom-left-radius: var(--employmentRounding);
-  /* Basic box shadow */
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -386,9 +394,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 20px;
   text-align: left;
   font-family: "Roboto", sans-serif;
-  background-color: var(--employmentColor);
-  /* Basic box shadow */
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -410,18 +415,12 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .grid-job-discription {
   color: black;
   display: flex;
-  justify-content: left;
+  align-items: center; /* Vertically center the text */
+  justify-content: flex-start; /* Align text to the left side */
   font-size: 20px;
   padding: 10px;
   text-align: left;
   font-family: "Roboto", sans-serif;
-  font-size: medium;
-  background-color: var(--employmentColor);
-  border-top-right-radius: var(--employmentRounding);
-  border-bottom-right-radius: var(--employmentRounding);
-  /* Basic box shadow */
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
 /*formats the logo for work and school*/
