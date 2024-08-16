@@ -409,3 +409,9 @@ footer {
   font-family: "Lexend Deca", sans-serif;
   margin: 40px;
 }
+
+.project-content{
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
