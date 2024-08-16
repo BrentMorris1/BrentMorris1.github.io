@@ -4,7 +4,7 @@
   --navy: #04111a; 
   --white: #fcfcfc; /*slightly off white*/
   --employmentRounding: 10px;
-  --employmentColor: #e7e6e5;
+  --employmentColor: #eeeeee;
 }
 
 body {
@@ -356,7 +356,7 @@ footer {
   display: grid;
   grid-template-columns: subgrid; /*Enable collumn information from this grid to be passed to each row grid */
   color: var(--white);
-  grid-template-columns: [logo] 15% [tite] auto [bullet] auto;
+  grid-template-columns: [logo] 15% [tite] 30% [bullet] auto;
   row-gap: 20px;
   width: 85vw;
   padding-left: 5vw;
@@ -417,7 +417,6 @@ footer {
   display: flex;
   align-items: center; /* Vertically center the text */
   justify-content: flex-start; /* Align text to the left side */
-  font-size: 20px;
   padding: 10px;
   text-align: left;
   font-family: "Roboto", sans-serif;
@@ -458,4 +457,11 @@ footer {
   display: flex; 
   flex-direction: row; 
   justify-content: center;
+}
+
+.employment-centering{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
 }
