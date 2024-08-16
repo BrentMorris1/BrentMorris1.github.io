@@ -6,10 +6,23 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--white);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 header {
@@ -414,4 +427,10 @@ footer {
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.body-spacing{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
