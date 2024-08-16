@@ -3,6 +3,8 @@
   --tan: #E0CFBF;
   --navy: #04111a; 
   --white: #fcfcfc; /*slightly off white*/
+  --employmentRounding: 10px;
+  --employmentColor: #e7e6e5;
 }
 
 body {
@@ -71,6 +73,7 @@ header h1 a:hover {
   padding: 10px;
   max-width: 25%;
   min-width: 220px;
+  margin-top:50px;
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -353,7 +356,6 @@ footer {
   display: grid;
   color: var(--white);
   grid-template-columns: [logo] 15% [tite] auto [bullet] auto;
-  column-gap: 10px;
   row-gap: 20px;
   width: 85vw;
   padding-left: 5vw;
@@ -366,6 +368,9 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  background-color: var(--employmentColor);
+  border-top-left-radius: var(--employmentRounding);
+  border-bottom-left-radius: var(--employmentRounding);
 }
 
 /*Styling for job title section*/
@@ -375,9 +380,10 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
   text-align: left;
   font-family: "Roboto", sans-serif;
+  background-color: var(--employmentColor);
 }
 
 .grid-job-title h2{
@@ -404,12 +410,14 @@ footer {
   text-align: left;
   font-family: "Roboto", sans-serif;
   font-size: medium;
-
+  background-color: var(--employmentColor);
+  border-top-right-radius: var(--employmentRounding);
+  border-bottom-right-radius: var(--employmentRounding);
 }
 
 /*formats the logo for work and school*/
 .work-logo{
-  width:100%
+  width:100%;
 }
 
 .employment-or-school{

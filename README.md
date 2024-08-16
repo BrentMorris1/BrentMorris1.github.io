@@ -1,7 +1,8 @@
 Brent's Personal portfolio website hosted at brentmorris.ca
 
 Curentley known issues include
-- Project images blur during the hover transitio
-- The first two right clicks do not animate well for the project slider
-- The drop shadow might look a bit cartoonish on the projects slider images
-- The about me header is ocasionaly hidden by the webpage dropdown header
+- Add some box arround each employment line
+- Hide company and school logo in narrow screen mode
+- Add back button to project pages
+- Add photos to project pages
+- Add PDF coppy of Portfolio
