@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--white);
+
 }
 
 html, body {
@@ -427,10 +428,18 @@ footer {
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 1000px;
+  font-family: "Roboto", sans-serif;
 }
 
 .body-spacing{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.proj-content-centering{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
 }

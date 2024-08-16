@@ -14,33 +14,36 @@
     </header>
 
     <main>
+      <div class="proj-content-centering">
         <section class="project-content">
-            <h1>Active Acumulator Managment System</h1>
-            <p>As a member of the University of Waterloo Formula Electric Design team I was tasked with designing an active
-               cell balancing board for our accumulator. At the time I joined the team our existing AMS board was
-                responsible for monitoring the temperature of the cylindrical LiPo cells within the accumulator as well 
-                as the voltages of all cells. The existing board employed passive cell balancing which discharged a cell 
-                that was charging at a rate faster than the surrounding cells through a MOSFET and high-power resistor. 
-                The existing design was based on the LTC6804 chip.</p>
+          <h1>Active Acumulator Managment System</h1>
+          <p>As a member of the University of Waterloo Formula Electric Design team I was tasked with designing an active
+             cell balancing board for our accumulator. At the time I joined the team our existing AMS board was
+              responsible for monitoring the temperature of the cylindrical LiPo cells within the accumulator as well 
+              as the voltages of all cells. The existing board employed passive cell balancing which discharged a cell 
+              that was charging at a rate faster than the surrounding cells through a MOSFET and high-power resistor. 
+              The existing design was based on the LTC6804 chip.</p>
 
-              <p>The existing board was only used during the charging phase to balance cells, while the cells were 
-                  discharging there was no way to redistribute charge throughout the cells if one cell was charging 
-                  faster than the others.</p>
+            <p>The existing board was only used during the charging phase to balance cells, while the cells were 
+                discharging there was no way to redistribute charge throughout the cells if one cell was charging 
+                faster than the others.</p>
 
-              <p>The active accumulator management board I designed used synchronous flyback transformers to transfer
-                 charge between individual group of parallel cells and the rest of the battery stack. The LTC3300 chip
-                  was used for this design as it supported ISO SPI communication that had already been implemented with
-                   the previous boards. The board was designed in Altium designer.</p>
+            <p>The active accumulator management board I designed used synchronous flyback transformers to transfer
+               charge between individual group of parallel cells and the rest of the battery stack. The LTC3300 chip
+                was used for this design as it supported ISO SPI communication that had already been implemented with
+                 the previous boards. The board was designed in Altium designer.</p>
 
-              <p>The AMS boards must fit inside the accumulator box; however, the team did not want to rebuild the
-                 accumulator box to accommodate a larger AMS board, therefore the active AMS board was required to have
-                  the same board space as the passive balancing board. This required a clever Power trace layout.</p>
+            <p>The AMS boards must fit inside the accumulator box; however, the team did not want to rebuild the
+               accumulator box to accommodate a larger AMS board, therefore the active AMS board was required to have
+                the same board space as the passive balancing board. This required a clever Power trace layout.</p>
 
-              <p>This project was canceled 70% of the way through the design phase when the formula electric electrical
-                 team lead realised the internal resistances of the LiPo cell composing our accumulator were
-                  sufficiently well controlled that active cell balancing was not worth the development time and cost.</p>
-            <!-- Add more detailed content for the project -->
-        </section>
+            <p>This project was canceled 70% of the way through the design phase when the formula electric electrical
+               team lead realised the internal resistances of the LiPo cell composing our accumulator were
+                sufficiently well controlled that active cell balancing was not worth the development time and cost.</p>
+          <!-- Add more detailed content for the project -->
+      </section>
+      </div>
+        
     </main>
     <!-- for sticky header on scroll functionality-->
     <!-- Sticky header script breaks return home link on project pages-->
