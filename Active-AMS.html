@@ -25,13 +25,13 @@
               The existing design was based on the LTC6804 chip.</p>
 
             <p>The existing board was only used during the charging phase to balance cells, while the cells were 
-                discharging there was no way to redistribute charge throughout the cells if one cell was charging 
+                discharging there was no way to redistribute charge throughout the cells if one cell was discharging 
                 faster than the others.</p>
 
             <p>The active accumulator management board I designed used a synchronous flyback transformer topology to transfer
-               charge between individual group of parallel cells and the rest of the battery stack. The LTC3300 chip
-                was used for this design as it supported ISO SPI communication that had already been implemented with
-                 the previous boards. The board was designed in Altium designer.</p>
+               charge between individual groups of parallel cells and the rest of the battery stack. The LTC3300 chip
+                was used for this design as it supported ISO SPI communication that was already implemented with
+                 the previous boards. The board was designed in Altium Designer.</p>
 
                  <img src="images/Active-AMS-Schmatic.png" alt="Portrait" class="photo">
 
