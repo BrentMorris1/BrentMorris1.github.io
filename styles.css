@@ -283,10 +283,9 @@ footer {
 }
 
 .contact-info-box {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: [logo] 20px [ending] auto;
   height: 100%;
-  justify-content: space-around;
 }
 
 .contact-info a {
