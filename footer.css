@@ -5,6 +5,7 @@ footer {
     font-family: "Inter", sans-serif;
   }
 
+/*Flexbox used to space out elements */
 .footer-content {
     display: flex;
     height:100%;
@@ -13,6 +14,7 @@ footer {
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
   }
   
+  /*grid with links on left side of the footer*/
   .link-grid {
     display: grid;
     grid-template-columns: [logo] 20px [ending] auto;
@@ -21,6 +23,7 @@ footer {
     column-gap: 10px;
   }
   
+  /*subgrid element for each row of the link-grid*/
   .link-line {
     display: grid;
     grid-column: 1 / -1; /* Span all 3 columns */
@@ -32,29 +35,21 @@ footer {
     text-decoration: none;
   }
 
-
-
-  .link-grid text{
-    align-self: center;
-  }
-
+    /*Icons for each row of the link grid */
   .footer-icons{
     height: auto;
     width: 100%;
     filter: invert(100%);
     padding: 5px;
   }
-  
-  .contact-info a:visited {
-    color: inherit; /* Keep the color consistent after visiting the link */
+
+  /*Text within each row of the link grid*/
+  .link-grid text{
+    align-self: center;
   }
-  
-  .contact-info a:hover {
-    color: inherit; /* No color change on hover */
-    text-decoration: none; /* No underline on hover */
-  }
-  
-  .download-buttons {/*This is a flexbox element that encloses both download buttons*/
+
+  /*This is a flexbox element that encloses both download buttons*/
+  .download-buttons {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
@@ -80,15 +75,12 @@ footer {
     transform: scale(1.05); /* Increase size by 5% */
   }
   
-  .icon{
+  .download-icon{
     height: 80%;
     width: auto;
     padding: 10px;
   }
-  
- 
 
-  
   .download-buttons a text {
     padding-left: 10px; /* Padding around the text */
     font-family: "Lexend Deca", sans-serif;
