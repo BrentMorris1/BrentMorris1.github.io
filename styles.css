@@ -267,13 +267,6 @@ header h1 a:hover {
 }
 /*bellow content pertains to the footer*/
 
-footer {
-  background-color: rgb(0, 0, 0); /* Dark background for footer */
-  color: var(--white); /* Light text color */
-  padding: 20px;
-  font-family: "Inter", sans-serif;
-}
-
 /*Contains all work experiences*/
 .grid-container {
   display: grid;
