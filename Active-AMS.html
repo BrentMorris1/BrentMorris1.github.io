@@ -50,57 +50,15 @@
     <!-- for sticky header on scroll functionality-->
     <!-- Sticky header script breaks return home link on project pages-->
 
-    <footer>
-        <!-- Your footer content (same as the main page) -->
-        <div class="footer-content">
-            <div class="contact-info-box">
-      
-              <!-- Email -->
-              <div class="contact-info">
-                <a>
-                  <img src="mail-icon.svg" alt="Download Portfolio Icon" class = "link-icons"> 
-                <text>brent.morris.2165@gmail.com</text>
-                </a>
-                
-              </div>
-      
-              <!-- Phone number-->
-              <div class="contact-info"> <a>
-                <img src="call-icon.svg" alt="Download Portfolio Icon" class = "link-icons"> 
-                <text>905-330-2738</text>
-              </a>
-              </div>
-      
-              <!-- LinkedIn Link-->
-              <div class="contact-info">
-                <a href="https://www.linkedin.com/in/brent-morris-52a553252/" target="_blank">
-                  <img src="linkedin-square-icon.svg" alt="Download Portfolio Icon" class = "link-icons">
-                  <text> LinkedIn</text>
-                </a>
-                 
-              </div>
-      
-              <!-- GitHub link-->
-              <div class="contact-info">
-                <a href="https://github.com/BrentMorris1" target="_blank">
-                <img src="github-icon.svg" alt="Download Portfolio Icon" class = "link-icons"> 
-                <text>BrentMorris1
-                </a>
-                </text>
-              </div>
-            </div>
-      
-            <div class="download-buttons"> <!-- This is a flexbox element that encloses both download buttons-->
-                <a href="resume.pdf" class="download-btn" download>
-                  <text>Resume</text>
-                  <img src="download-file-round-icon.svg" alt="Download Portfolio Icon" class = "icon"> 
-                </a>
-                <a href="portfolio.pdf" class="download-btn" download>
-                  <text>Portfolio</text>
-                  <img src="download-file-round-icon.svg" alt="Download Portfolio Icon" class = "icon"> 
-                </a>
-            </div>
-        </div>
-    </footer>
+    <!--Include footer from footer.html-->
+<div id="footer"></div>
+<script>
+    fetch('Footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
 </body>
 </html>

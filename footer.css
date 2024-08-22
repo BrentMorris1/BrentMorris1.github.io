@@ -20,7 +20,7 @@ footer {
     grid-template-columns: [logo] 20px [ending] auto;
     width: 300px;
     height: 80%;
-    column-gap: 20px;
+    column-gap: 15px;
   }
   
 /* Make .link-line clickable and change cursor on hover */
