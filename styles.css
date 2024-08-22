@@ -364,8 +364,10 @@ header h1 a:hover {
 
 .proj-content-centering{
   display: flex; 
+  height: 100%;
   flex-direction: row; 
   justify-content: center;
+  align-items: center;
 }
 
 .employment-centering{
