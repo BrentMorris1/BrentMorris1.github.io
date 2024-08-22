@@ -110,7 +110,7 @@ header h1 a:hover {
 
 /* Code for projects slider*/
 .container {
-    width: auto; /*container enclosing flex box is always the exact width of the screen*/
+    width: 100%; /*container enclosing flex box is always the exact width of the screen*/
     height: 60vh; /*The normal percentage unit dose not work here */
     overflow: hidden;
     position: relative;
