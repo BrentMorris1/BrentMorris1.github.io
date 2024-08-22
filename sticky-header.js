@@ -22,12 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 lastScrollTop = scrollTop;
             });
 
-            scrollToTop.addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent default anchor click behavior
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth' // Smooth scrolling
+            if (window.location.pathname.endsWith("index.html")) {
+                scrollToTop.addEventListener("click", function(event) {
+                    event.preventDefault(); // Prevent default anchor click behavior
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth' // Smooth scrolling
+                    });
                 });
-            });
+            }
+            
         });
 });
