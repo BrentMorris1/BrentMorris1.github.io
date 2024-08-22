@@ -1,29 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let lastScrollTop = 0;
-    const header = document.querySelector("header");
-    const scrollToTop = document.querySelector('header h1 a');
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
 
-    window.addEventListener("scroll", function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            // Now that the header is loaded, apply the sticky header logic
+            let lastScrollTop = 0;
+            const header = document.querySelector("header");
+            const scrollToTop = document.querySelector('header h1 a');
 
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            header.classList.add("hidden");
-        } else {
-            // Scrolling up
-            header.classList.remove("hidden");
-        }
-        lastScrollTop = scrollTop;
-    });
+            window.addEventListener("scroll", function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    /*this part should allow clicking on "Brent Morris" to scroll to the top smoothly, but I still find the scrolling abrupt */
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add("hidden");
+                } else {
+                    // Scrolling up
+                    header.classList.remove("hidden");
+                }
+                lastScrollTop = scrollTop;
+            });
 
-    scrollToTop.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent default anchor click behavior
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Smooth scrolling
+            scrollToTop.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default anchor click behavior
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scrolling
+                });
+            });
         });
-    });
 });
-
