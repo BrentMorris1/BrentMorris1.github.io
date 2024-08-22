@@ -1,6 +1,6 @@
 :root {
   --blue: #9BB2C0;
-  --tan: #E0CFBF;
+  --tan: rgb(224, 207, 191);
   --navy: #04111a; 
   --white: #fcfcfc; /*slightly off white*/
   --employmentRounding: 10px;
