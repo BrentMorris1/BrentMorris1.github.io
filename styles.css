@@ -111,17 +111,18 @@ header h1 a:hover {
 /* Code for projects slider*/
 .container {
     width: 100%; /*container enclosing flex box is always the exact width of the screen*/
-    height: 60vh; /*The normal percentage unit dose not work here */
+    height: 150vh; /*The normal percentage unit dose not work here */
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   
   .slide {
-    height: 100%; /*You need to set height as 100% so the forward and back buttons are vertical centered on cards*/
+    height: 50%; /*You need to set height as 100% so the forward and back buttons are vertical centered on cards*/
     width: 30%;
     overflow: clip;
     border-radius: 5px; /*rounded corners*/

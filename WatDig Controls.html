@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatDig</title>
+    <link rel="icon" href="images/tan-color.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your main CSS file -->
+</head>
+
+
+
+<body>
+    
+  <div id="header"> </div> <!--Need to declare the location where this stickey-header script will insert the header-->
+  <!-- for sticky header on scroll functionality-->
+  <script src="sticky-header.js"></script> <!-- Link to the JavaScript file -->
+
+    <main>
+      <div class="proj-content-centering">
+        <section class="project-content">
+          <h1>WatDig</h1>
+          <p>WatDig is the University of Waterloo’s student design team competing in the Not-a-Boring Competition. 
+            It is our first year compeating in the full scale competition building a tunnel boring machine (TBM) meaning everything is designed from scratch. 
+            I am responsible for leading the controls team. Our team is on track to finsh construction by end of year.
+          </p>
+
+          <img src="images/Discord Gearbox and motor assembly.jpg" alt="Motor and Gearbox assembly" class="photo">
+
+          <p>
+            The controls system acuires readings from dozens of sensors and controls actuators on and off the TBM.
+            All sensors and actuators comunicate to the control laptop over RS-485 Modbus RTU. Some devices comunicate nativley with Modbus RTU,
+            such as our ACS550 motor drives and power meters, while the majority rely on custom PCBs to create a RS-485 interface for the sensors
+            and actuators.
+          </p>
+          <img src="images/Below Ground Sensor Board.png" alt="PCB" class="photo">
+
+          <p>
+            The WatDig team has three custom PCBs. The above ground sensor board, below ground sensor board and high voltage monitoring board.
+            Some of the sensors and actuators they interface with include:
+          </p>
+
+          <ul>
+            <li>I2C based intertial measurement units </li>
+            <li>DC linear actators</li>
+            <li>Piezoresistive force sensors</li>
+            <li>4-20ma inputs</li>
+            
+          </ul>
+
+          <p>
+            The boards are controlled by the STM32 family of microcontrollers. The firmware is developed in C.
+          </p>
+
+          <p>Please feel free to ask me anything about our controls system. The machine is developing rapidly.</p>
+          <!-- Add more detailed content for the project -->
+      </section>
+      </div>
+        
+    </main>
+    <!-- for sticky header on scroll functionality-->
+     <!-- Sticky header script breaks return home link on project pages-->
+
+    <!--Include footer from footer.html-->
+<div id="footer"></div>
+<script>
+    fetch('Footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+</body>
+
+
+</html>
